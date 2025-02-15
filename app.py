@@ -3,15 +3,6 @@ import plotly.express as px
 import os
 import streamlit as st
 
-# Obtener el puerto desde la variable de entorno
-PORT = int(os.environ.get("PORT", 8503))
-
-# Asegurar que Streamlit se ejecuta en el puerto correcto
-st.write(f"Iniciando aplicación en el puerto {PORT}")
-
-if __name__ == "__main__":
-    st.run(port=PORT)
-
 car_data = pd.read_csv('C:/Users/krenc/SOFTWARE_KAREN/vehicles_us.csv') # leer los datos
 
 # Título de la aplicación
