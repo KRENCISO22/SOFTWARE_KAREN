@@ -6,8 +6,11 @@ import streamlit as st
 # Obtener el puerto desde la variable de entorno
 PORT = int(os.environ.get("PORT", 8503))
 
-st.set_page_config(page_title="Mi App en Render", page_icon="🚀")
-st.write(f"La aplicación está corriendo en el puerto {PORT}")
+# Asegurar que Streamlit se ejecuta en el puerto correcto
+st.write(f"Iniciando aplicación en el puerto {PORT}")
+
+if __name__ == "__main__":
+    st.run(port=PORT)
 
 car_data = pd.read_csv('C:/Users/krenc/SOFTWARE_KAREN/vehicles_us.csv') # leer los datos
 
